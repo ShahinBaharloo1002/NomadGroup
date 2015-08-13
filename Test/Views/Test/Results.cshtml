@@ -1,0 +1,102 @@
+﻿@model Test.Models.TestShowViewModel
+@using GridMvc.Html
+@{
+    ViewBag.Title = "Results";
+}
+
+<div class="jumbotron">
+    <h1>Test</h1>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="well">
+                    <h2>All Numbers Up to and including input </h2>
+                    <ul>
+                        @if (Model.AllUpToInc.Count() > 0)
+                        {
+
+                            foreach (var item in Model.AllUpToInc)
+                            {
+                                <li>
+                                    @item
+                                </li>
+                            }
+
+                        }
+                    </ul>       
+                </div>
+                    <div class="well">
+                        <h2>All Odd Numbers Up to and including input </h2>
+                        <ul>
+                            @if (Model.AllOddUpToInc.Count() > 0)
+                            {
+
+                                foreach (var item in Model.AllOddUpToInc)
+                                {
+                                    <li>
+                                        @item
+                                    </li>
+                                }
+
+                            }
+                        </ul>     
+                        
+                    </div>
+                        <div class="well">
+                            <h2>All Even Numbers Up to and including input </h2>
+                            <ul>
+                                @if (Model.AllEvenUpToInc.Count() > 0)
+                                {
+
+                                    foreach (var item in Model.AllEvenUpToInc)
+                                    {
+                                        <li>
+                                            @item
+                                        </li>
+                                    }
+
+                                }
+                            </ul> 
+                            
+                        </div>
+                            <div class="well">
+                                <h2>All Numbers Up with condition 1.4 </h2>
+                                <ul>
+                                    @if (Model.AllExcept.Count() > 0)
+                                    {
+
+                                        foreach (var item in Model.AllExcept)
+                                        {
+                                            <li>
+                                                @item
+                                            </li>
+                                        }
+
+                                    }
+                                </ul> 
+                                
+                            </div>
+                                <div class="well">
+                                    <h2>All Fibonacci Numbers Up to and including input </h2>
+                                    <ul>
+                                        @if (Model.AllFibonacci.Count() > 0)
+                                        {
+
+                                            foreach (var item in Model.AllFibonacci)
+                                            {
+                                                <li>
+                                                    @item
+                                                </li>
+                                            }
+
+                                        }
+                                    </ul> 
+                                    
+
+                                </div>
+        </div>
+    </div>
+</div>
